@@ -15,13 +15,19 @@ Docker Container for running PHP cli commands in production
 
 ### Usage
 
-
 use it as a base image for your container
 ```
 FROM buonzz/php-production-cli:latest
 ```
 
+or use it directly as an interactive shell
+```
+docker run -it buonzz/php-production-cli:0.0.1 /bin/bash
+```
+
 ## Building the image
+
+You'll only need to re-build the docker image if you want to install any additional software. After you had tweaked the Dockerfile. just run the command below to re-build it.
 
 ```
 ./build.sh
