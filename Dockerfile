@@ -68,6 +68,13 @@ RUN . ~/.bashrc
 # install supervisord for long running tasks
 RUN apt-get install supervisor -y --force-yes
 
+RUN apt-get purge -y man perl-modules vim-common vim-tiny \ 
+    && apt-get clean autoclean \
+    && apt-get --purge autoremove -y \ 
+    && rm -rf /var/lib/{apt,dpkg,cache,log}/
+
+
+
 WORKDIR /var/www
 
 CMD composer self-update
