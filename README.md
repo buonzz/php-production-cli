@@ -21,13 +21,6 @@ use it as a base image for your container
 FROM buonzz/php-production-cli:latest
 ```
 
-or, login to it and invoke PHP commands
-
-```
-docker exec -ti  php-production-cli bash
-```
-
-
 ## Building the image
 
 ```
