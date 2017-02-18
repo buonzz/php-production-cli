@@ -50,7 +50,6 @@ RUN apt-get update && \
         git \
         curl \
         vim \
-        nano \
         postgresql-client \
     && apt-get clean
 
@@ -63,16 +62,6 @@ RUN curl -s http://getcomposer.org/installer | php && \
     echo "export PATH=${PATH}:/var/www/vendor/bin" >> ~/.bashrc && \
     mv composer.phar /usr/local/bin/composer
 RUN . ~/.bashrc
-
-
-# install supervisord for long running tasks
-RUN apt-get install supervisor -y --force-yes
-
-RUN apt-get purge -y man perl-modules vim-common vim-tiny \ 
-    && apt-get clean autoclean \
-    && apt-get --purge autoremove -y \ 
-    && rm -rf /var/lib/{apt,dpkg,cache,log}/
-
 
 
 WORKDIR /var/www

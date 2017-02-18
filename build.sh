@@ -1,3 +1,3 @@
 #/bin/bash
 
-docker build -t php-production-cli .
+docker build -t php-production-cli . --no-cache

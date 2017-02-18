@@ -33,6 +33,22 @@ You'll only need to re-build the docker image if you want to install any additio
 ./build.sh
 ```
 
+see the latest id
+```
+docker images
+```
+
+tag it
+```
+docker tag <id> buonzz/php-production-cli:latest
+docker tag <id> buonzz/php-production-cli:x.x.x
+```
+
+push it
+```
+docker push buonzz/php-production-cli
+```
+
 ## Running the image
 
 ```
