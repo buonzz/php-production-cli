@@ -22,7 +22,7 @@ FROM buonzz/php-production-cli:latest
 
 or use it directly as an interactive shell
 ```
-docker run -it buonzz/php-production-cli:0.0.1 /bin/bash
+docker run -it buonzz/php-production-cli /bin/bash
 ```
 
 ## Building the image
