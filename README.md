@@ -48,9 +48,3 @@ push it
 ```
 docker push buonzz/php-production-cli
 ```
-
-## Running the image
-
-```
-docker run php-production-cli
-```
