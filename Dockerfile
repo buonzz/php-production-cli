@@ -53,6 +53,9 @@ RUN apt-get update && \
         postgresql-client \
     && apt-get clean
 
+RUN echo "error_log = /var/log/php_errors.log" >> /etc/php/7.1/cli/php.ini \\ 
+    &&touch /var/log/php_errors.log
+
 #####################################
 # Composer:
 #####################################
@@ -66,4 +69,4 @@ RUN . ~/.bashrc
 
 WORKDIR /var/www
 
-CMD composer self-update
+CMD ["tail", "-f", "/var/log/php_errors.log"]
