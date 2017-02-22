@@ -62,7 +62,7 @@ RUN echo "error_log = /var/log/php_errors.log" >> /etc/php/7.1/cli/php.ini \\
 
 # Install composer and add its bin to the PATH.
 RUN curl -s http://getcomposer.org/installer | php && \
-    echo "export PATH=${PATH}:/var/www/vendor/bin" >> ~/.bashrc && \
+    echo "export PATH=${PATH}:/var/www/vendor/bin" > ~/.bashrc && \
     mv composer.phar /usr/local/bin/composer
 RUN . ~/.bashrc
 
